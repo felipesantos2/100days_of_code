@@ -1,7 +1,8 @@
 # 100days_of_code
-Documentando 100 dias de estudo de programação.
 
-## JavaScript
+**Documentando 100 dias de estudo de programação.**
 
-**[01/100]**
+###  JAVASCRIPT
+
+> **[01/100]**
 1. [Fetch Api](./markdown/fetchApi.md)
