@@ -36,7 +36,7 @@ async function getPosts(id) {
 // retorno -> {userId: 1, id: 1, title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', body: 'quia et suscipit\nsuscipit recusandae consequuntur …strum rerum est autem sunt rem eveniet architecto'}
 ```
 
-03 - Enviando informações - POST
+03 - Enviando - POST
 
 ```js
 
@@ -72,6 +72,42 @@ async function addPost(data) {
         body: 'Meu conteudo - Felipe'
     }
     const json = await addPost(data);
+    console.log(json)
+}());
+
+```
+
+
+04 - Editando - PUT
+
+```js
+
+// PUT
+async function editPost(data, id) {
+    const options = {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json; chatset=UTF-8'
+        } 
+    }
+
+    const response = await fetch(
+        `https://jsonplaceholder.typicode.com/posts/${id}`,
+        options
+    );
+
+    return getResponse(response);
+}
+
+
+(async function () { // IIFE fuction expression
+    const data = {
+        userID: 1,
+        title: 'meu post',
+        body: 'Meu conteudo - Felipe00'
+    }
+    const json = await editPost(data, 1);
     console.log(json)
 }());
 
