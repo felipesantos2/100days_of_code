@@ -6,3 +6,6 @@
 
 > **[01/100]**
 1. [Fetch Api](./markdown/fetchApi.md)
+
+> **[02/100]**
+1. [Objeto Window](./markdown/window.md)

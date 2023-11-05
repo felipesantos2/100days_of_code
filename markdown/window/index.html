@@ -1,26 +1,33 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>else if</title>
+    <title>WINDOW</title>
 </head>
 <body>
+
+    <button onclick="openNewWindow()">
+        Abrir Janela
+    </button>
+
+    <button onclick="closeWindow()">
+        Fechar
+    </button>
+
     <script>
-
-
-        let a = 10;
-
-        if(a > 9) {
-            console.log('maio que 9')
-        } else if(a > 8) {
-            console.log('maio que 8')
-        } else {
-            console.log('incorreto');
+        let win;
+        
+        function openNewWindow() {
+            win = window.open('https://github.com/felipesantos2', '', 'width=700, height=800')
+            console.log(win)
         }
 
-
+        function closeWindow() {
+            win.close()
+        }
     </script>
+
 </body>
 </html>
